@@ -1,0 +1,67 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r8p20.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Dec 15 14:26:52 CET 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171215/wfoulon
+
+= Git history ==================================================================
+$> git -C /var/folders/9w/kc9nj0vn4452gwcs706qgq_40000gq/T/tmpth4qkA/user log --pretty='%H - %an, %ad : %s'
+e47fc7188e6adf3930dda1caefdfee016678db47 - Wilfrid FOULON, Fri Dec 15 14:26:40 2017 +0100 : thirdpush
+017c0f70421f4ebbe8a3d8318a5730589bd07a20 - Wilfrid FOULON, Fri Dec 15 13:01:43 2017 +0100 : secondpush
+11fbc72f5fc4e80404f697f88c986d55397c063b - Wilfrid FOULON, Fri Dec 15 11:07:59 2017 +0100 : firstpush
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/9w/kc9nj0vn4452gwcs706qgq_40000gq/T/tmpth4qkA/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  758 Dec 15 14:26 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Dec 15 14:26 ft_strpbrk
+drwxr-xr-x  3 deepthought  deepthought  102 Dec 15 14:26 ft_swap
+drwxr-xr-x  3 deepthought  deepthought  102 Dec 15 14:26 print_hex
+
+/var/folders/9w/kc9nj0vn4452gwcs706qgq_40000gq/T/tmpth4qkA/user/ft_strpbrk:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1297 Dec 15 14:26 ft_strpbrk.c
+
+/var/folders/9w/kc9nj0vn4452gwcs706qgq_40000gq/T/tmpth4qkA/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  968 Dec 15 14:26 ft_swap.c
+
+/var/folders/9w/kc9nj0vn4452gwcs706qgq_40000gq/T/tmpth4qkA/user/print_hex:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1908 Dec 15 14:26 print_hex.c
+ 
+= print_hex ====================================================================
+$> clang -Wextra -Wall -Werror print_hex.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./881q0mwjysc7pab6x0rqu9fw 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./4ftbopvnv2tkj32qsw9vyog0 "21" "2313"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./p2oosc51q1n47m90gwawtux3 2147483647
+Command './p2oosc51q1n47m90gwawtux3 2147483647' timed out after 10 seconds
+Grade: 0
+
+= Final grade: 0 ===============================================================

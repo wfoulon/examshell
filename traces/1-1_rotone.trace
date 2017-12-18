@@ -1,0 +1,89 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r6p7.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Dec  4 11:47:29 CET 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171204/wfoulon
+
+= Git history ==================================================================
+$> git -C /var/folders/21/x0z19j_95qbd1wsd41rnf6v40000gq/T/tmpoehHuo/user log --pretty='%H - %an, %ad : %s'
+c1f5ab77f12b03c152a6e29d4a35cd221b98015e - Wilfrid FOULON, Mon Dec 4 11:47:16 2017 +0100 : secondpush
+f65e518e297e51392f082befe9ced863932029b1 - Wilfrid FOULON, Mon Dec 4 11:23:17 2017 +0100 : firstpush
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/21/x0z19j_95qbd1wsd41rnf6v40000gq/T/tmpoehHuo/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  533 Dec  4 11:47 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Dec  4 11:47 ft_swap
+drwxr-xr-x  4 deepthought  deepthought  136 Dec  4 11:47 rotone
+
+/var/folders/21/x0z19j_95qbd1wsd41rnf6v40000gq/T/tmpoehHuo/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  968 Dec  4 11:47 ft_swap.c
+
+/var/folders/21/x0z19j_95qbd1wsd41rnf6v40000gq/T/tmpoehHuo/user/rotone:
+total 32
+-rwxr-xr-x  1 deepthought  deepthought  8560 Dec  4 11:47 a.out
+-rw-r--r--  1 deepthought  deepthought  1595 Dec  4 11:47 rotone.c
+ 
+= rotone =======================================================================
+$> clang -Wextra -Wall -Werror rotone.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./2ezoqvdvc7q4i4aq69dm2urd 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./6hju0qrci2giag8pavpeix8x 
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./qs2qy5fy6m43651zshewkt8c "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./y34h9a11bys8p6zy79nmi9rb "1qWQj4Hg5"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./44yf86lehd8dkatrqcn5d6m4 "CHhIOrWne1Y7"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./r5uj0x3u13psfnt8tf0doqvi "2I6Q1UyWT7pGndkeV"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./wvdt345iha40tsgl5pdf76og "GJI5OnC6gr AydOZq7Vlxo8 E7yN3IQV5L tXPRcVZ5i 5bIwVJgXaY aPiA0bYo kpn akT3tGVy sMwn2ARcJpqZ Rm4ODNCspkd 7lUquYVd53cNz 5tGZBUT3OzlNCFH wJvC5EgT xk0n2tH 9sZMkASQ6c78mI4n t9S"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+--- user_output_test7	2017-12-04 11:47:32.000000000 +0100$
++++ test7.output	2017-12-04 11:47:32.000000000 +0100$
+@@ -1 +1 @@$
+-HKJ5PoD6hs BzePAr7Wmyp8 F7zO3JRW5M uYQSdWA5j 5cJxWKhYbZ bQjB0cZp lqo blU3uHWz tNxo2BSdKqrA Sn4PEODtqle 7mVrvZWe53dO{ 5uHACVU3P{mODGI xKwD5FhU yl0o2uI 9tANlBTR6d78nJ4o u9T$
++HKJ5PoD6hs BzePAr7Wmyp8 F7zO3JRW5M uYQSdWA5j 5cJxWKhYbZ bQjB0cZp lqo blU3uHWz tNxo2BSdKqrA Sn4PEODtqle 7mVrvZWe53dOa 5uHACVU3PamODGI xKwD5FhU yl0o2uI 9tANlBTR6d78nJ4o u9T$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

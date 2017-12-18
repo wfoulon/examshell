@@ -1,0 +1,70 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r11p19.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Dec  4 12:44:39 CET 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.38)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171204/wfoulon
+
+= Git history ==================================================================
+$> git -C /var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user log --pretty='%H - %an, %ad : %s'
+aad85f257badab9cd471f51a2cd17a6ec1db01d7 - Wilfrid FOULON, Mon Dec 4 12:44:25 2017 +0100 : fourthpush
+d39b5cf20c07e0a61ece52e3cd89c67c08ee8c6b - Wilfrid FOULON, Mon Dec 4 12:00:06 2017 +0100 : le
+0ea9f57594acaf201378959638f4dc15306f16fd - Wilfrid FOULON, Mon Dec 4 11:59:36 2017 +0100 : sthirdpush
+c1f5ab77f12b03c152a6e29d4a35cd221b98015e - Wilfrid FOULON, Mon Dec 4 11:47:16 2017 +0100 : secondpush
+f65e518e297e51392f082befe9ced863932029b1 - Wilfrid FOULON, Mon Dec 4 11:23:17 2017 +0100 : firstpush
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1274 Dec  4 12:44 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Dec  4 12:44 ft_strcspn
+drwxr-xr-x  3 deepthought  deepthought   102 Dec  4 12:44 ft_swap
+drwxr-xr-x  3 deepthought  deepthought   102 Dec  4 12:44 rotone
+drwxr-xr-x  3 deepthought  deepthought   102 Dec  4 12:44 ulstr
+
+/var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user/ft_strcspn:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1165 Dec  4 12:44 ft_strcspn.c
+
+/var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  968 Dec  4 12:44 ft_swap.c
+
+/var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user/rotone:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1595 Dec  4 12:44 rotone.c
+
+/var/folders/xr/9wtlzcr17z77z4__3qfb2zxr0000gq/T/tmpbcGRkm/user/ulstr:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1462 Dec  4 12:44 ulstr.c
+ 
+= ft_strcspn ===================================================================
+$> clang -Wextra -Wall -Werror main.c ft_strcspn.c -o user_exe 
+ft_strcspn.c:15:36: error: unknown type name 'cont'; did you mean 'const'?
+size_t          ft_strcspn(const char *s1, cont char *s2)
+                                           ^~~~
+                                           const
+ft_strcspn.c:20:7: error: read-only variable is not assignable
+        *s1r = *s1;
+        ~~~~ ^
+2 errors generated.
+
+Could not compile 'user_exe'
+Grade: 0
+
+= Final grade: 0 ===============================================================
