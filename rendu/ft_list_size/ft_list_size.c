@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcspn.c                                       :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfoulon <wfoulon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 12:01:59 by wfoulon           #+#    #+#             */
-/*   Updated: 2017/12/04 12:44:06 by wfoulon          ###   ########.fr       */
+/*   Created: 2018/01/05 15:28:20 by wfoulon           #+#    #+#             */
+/*   Updated: 2018/01/05 15:32:58 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
 
-size_t		ft_strcspn(const char *s1, cont char *s2)
+#include "ft_list_size.h"
+
+int		ft_list_size(t_list *begin_list)
 {
-	const char *s1r;
-	const char *s2r;
+	int i;
+	t_list *list;
 
-	*s1r = *s1;
-	while (*s1r)
+	i = 0;
+	list = begin_list;
+	while (list)
 	{
-		s2r = s2;
-		while (*s2r)
-		{
-			if (*s1r == *s2r++)
-				return (s1r - s1);
-		}
-		s1r++;
+		list = list->next;
+		i++;
 	}
-	return (s1r - s1);
+	return (i);
 }

@@ -31,7 +31,7 @@ char		*ft_strchr(const char *s, int c)
 	{
 		return ((char *)s + i);
 	}
-		return (NULL);
+	return (NULL);
 }
 
 char		*ft_strpbrk(const char *s1, const char *s2)
