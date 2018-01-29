@@ -6,7 +6,7 @@
 /*   By: wfoulon <wfoulon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 14:11:37 by wfoulon           #+#    #+#             */
-/*   Updated: 2018/01/26 14:16:39 by wfoulon          ###   ########.fr       */
+/*   Updated: 2018/01/29 15:48:34 by wfoulon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		ft_list_remove_if(t_list **begin_list, void *data_ref, int *cmp())
 	t_list	*list;
 	t_list	*tmp;
 
-	while (*begin_list && (cmp(*begin_list)->data, data_ref) == 0)
+	while (*begin_list && cmp((*begin_list)->data, data_ref) == 0)
 	{
 		tmp = *begin_list;
 		*begin_list = (*begin_list)->next;
